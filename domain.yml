@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_name
+  - provide_name
+  - goodbye
+
+entities:
+  - name
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+  utter_ask_name:
+    - text: "What's your name?"
+  utter_remember_name:
+    - text: "Nice to meet you, {name}!"
+  utter_goodbye:
+    - text: "Goodbye!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_remember_name
