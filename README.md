@@ -1,4 +1,4 @@
-# Conversational AI with Memory using R
+# Conversational AI with Memory using Ra
 
 This project implements a conversational AI chatbot using Rasa that retains context across conversation turns through session-based memory. The chatbot is capable of greeting users, remembering their names, and responding to goodbye intents.
 
